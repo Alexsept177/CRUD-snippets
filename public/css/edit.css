@@ -1,0 +1,45 @@
+h1 {
+  color: #333;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.save, .cancel {
+  display: inline-block;
+  margin: 5px 5px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.save {
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  cursor: pointer;
+}
+.save:hover {
+  background-color: #218838;
+}
+.cancel-link {
+  background-color: #6c757d;
+  color: #fff;
+}
+.cancel-link:hover {
+  background-color: #5a6268;
+}
+
+.cancel {
+  background-color: #007bff;
+  color: #fff;
+}

@@ -1,0 +1,17 @@
+<header>
+  <nav class="navbar">
+    <a href="./" class="navbar-brand">Snippet Manager</a>
+    <div class="links">
+      <% if (loggedInUser) { %>
+        <span class="welcome-text">Welcome, <%= loggedInUser.username %>!</span>
+        <form action="./users/logout" method="POST" style="display:inline;">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <button type="submit" class="logout-button">Logout</button>
+        </form>        
+      <% } else { %>
+        <a href="./users/login" class="login-link">Login</a>
+        <a href="./users/register" class="register-link">Register</a>
+      <% } %>
+    </div>   
+  </nav>
+</header> 

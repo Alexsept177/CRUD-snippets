@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./css/notifications.css">
+<% if (successMessage) { %>
+  <div class="alert alert-success">
+    <%= successMessage %>
+  </div>
+<% } %>
+
+<% if (errorMessage) { %>
+  <div class="alert alert-danger">
+    <%= errorMessage %>
+  </div>
+<% } %>
+
+<% if (flash && flash.message) { %>
+  <div class="alert alert-info">
+    <%= flash.message %>
+  </div>
+<% } %>
+

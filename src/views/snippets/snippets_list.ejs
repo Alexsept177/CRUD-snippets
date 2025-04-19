@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./css/snippets_list.css">
+
+<h1>Snippet List</h1>
+<% if (loggedInUser) { %>
+  <a href="./snippets/create" class="create-button">Create Snippet</a>
+<% } %>
+<ul>
+  <% snippets.forEach(snippet => { %>
+    <li class="snippet-item">
+      <div class="snippet-box">
+        <a href="./snippets/snippets_list/show/<%= snippet._id %>" class="snippet-box-content">
+          <h2><%= snippet.title %></h2>
+          <p>
+            <%= snippet.content.length > 100 
+              ? snippet.content.substring(0, 100) + '...' 
+              : snippet.content 
+            %>
+          </p>
+        </a>
+        <div class="snippet-meta">
+          <small class="snippet-author">
+            By: <%= snippet.createdBy.username %> |
+            <span class="snippet-time">
+              <%= new Date(snippet.createdAt).toLocaleTimeString("sv-SE", { 
+                hour: "2-digit", 
+                minute: "2-digit", 
+                second: "2-digit"
+              }) %>
+            </span> |
+            <%= new Date(snippet.createdAt).toLocaleDateString("sv-SE", { 
+              year: "numeric", 
+              month: "long", 
+              day: "numeric" 
+            }) %>
+          </small>
+        </div>
+      </div>
+    </li>
+  <% }) %>
+</ul>

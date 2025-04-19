@@ -1,0 +1,19 @@
+<script src="./js/main.js"></script>
+
+<main>
+  <div class="container">
+    <h1>Welcome to Snippet Manager</h1>
+    <% if (loggedInUser) { %>
+      <p>Hello, <%= loggedInUser.username %>! Start managing your snippets below.</p>
+      <div class="buttons">
+        <button class="login-button" id="viewSnippets">View Snippets</button>
+        <button class="snippets-button" id="CreateSnippets">Create New Snippet</button>
+      </div>
+    <% } else { %>
+      <p>Please login or explore snippets as a guest.</p>
+      <div class="buttons">
+        <button class="snippets-button" id="viewSnippets">View Snippets</button>
+      </div>
+    <% } %>
+  </div>
+</main>

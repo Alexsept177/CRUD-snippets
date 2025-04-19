@@ -1,0 +1,33 @@
+{
+  "name": "assignment-b1-crud-snippets",
+  "version": "1.0.0",
+  "description": "In this assignment, you will create a web application to manage code [snippets](https://en.wikipedia.org/wiki/Snippet_(programming)). The web application will use the Node.js platform, Express as the application framework, and Mongoose as the object data modeling (ODM) library for MongoDB.",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "lint": "eslint ./src ./public || exit 0",
+    "lint:fix": "eslint ./src ./public --fix || exit 0"
+  },
+  "author": "Alexandru Antonescu <aa227wr@student.lnu.se>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@lnu/eslint-config": "^1.1.10",
+    "eslint": "^8.47.0"
+  }
+}

@@ -1,0 +1,188 @@
+/* Kroppens stil */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b8cfff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header och footer */
+header, footer {
+  background-color: #333;
+  text-align: center;
+  padding: 15px 0;
+}
+
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Huvuddel */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgb(255, 221, 221);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Header navbar */
+header .navbar {
+  background-color: #333;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #444;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .navbar-brand:hover {
+  color: #ccc;
+}
+
+header .links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Generella knappstilar */
+button, .login-link, .register-link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+  display: flex;
+  align-items: center; /* Justera element på samma nivå */
+  gap: 10px; /* Mellanrum mellan text och knapp */
+}
+
+
+/* Login-knapp */
+.login-link {
+  background-color: #007bff;
+  color: #000;
+}
+
+.login-link:hover {
+  background-color: #0056b3;
+  color: #fff; 
+  transform: scale(1.05); 
+}
+
+.welcome-text {
+  font-size: 1rem; /* Standardstorlek */
+  font-weight: 600; /* Halvfet text */
+  color: #ffffff; /* Vit text */
+  padding: 8px 16px; /* Inre mellanrum */
+  border: 2px solid #ffffff; /* Vit ram */
+  border-radius: 8px; /* Mjuka hörn */
+  background-color: #555; /* Neutral bakgrundsfärg */
+  transition: all 0.3s ease; /* Mjuk övergång för hover */
+}
+
+/* Effekt vid hover */
+.welcome-text:hover {
+  background-color: #444; /* Mörkare bakgrund vid hover */
+  color: #ffcc00; /* Gul text vid hover */
+  border-color: #ffcc00; /* Gul ram vid hover */
+  transform: scale(1.05); /* Lätt förstoring vid hover */
+}
+
+/* Stil för strong-elementet inuti */
+.welcome-text strong {
+  font-weight: bold;
+  color: #ffcc00; /* Gul färg för användarnamn */
+}
+
+
+/* Register-knapp */
+.register-link {
+  background-color: #ff8c00; 
+  color: #000; 
+}
+
+.register-link:hover {
+  background-color: #e07800; 
+  color: #fff;
+  transform: scale(1.05); 
+}
+
+/* Generella hover-effekter för knappar */
+button:hover, .login-link:hover, .register-link:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Stil för logout-knappen */
+.logout-button {
+  background-color: #d9534f; /* Röd färg */
+  color: #ffffff; /* Vit text */
+  border: none;
+  padding: 8px 12px; /* Inre mellanrum */
+  border-radius: 5px; /* Rundade hörn */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Mjuk övergång för hover-effekter */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Liten skugga */
+}
+
+/* Hover-effekt för logout-knappen */
+.logout-button:hover {
+  background-color: #c9302c; /* Mörkare röd vid hover */
+  transform: scale(1.05); /* Lätt förstoring */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Förstärkt skugga */
+}
+
+/* View Snippets-knapp */
+.snippets-button {
+  background-color: #28a745; /* Grön bakgrund */
+  color: #fff; /* Vit text */
+}
+
+.snippets-button:hover {
+  background-color: #1e7e34; /* Mörkare grön vid hover */
+  transform: scale(1.05); /* Lätt förstoring vid hover */
+}
+
+

@@ -1,0 +1,199 @@
+/* === SNIPPET CONTAINER === */
+.snippet-container {
+  margin: 50px auto;
+  background: #fde4e4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-height: 400px; /* Sätter en maxhöjd */
+  overflow: auto; /* Möjliggör scrollning vid behov */
+  white-space: pre-line;
+}
+
+/* === HEADER BUTTONS (Back & Edit) === */
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* === TITEL & TEXT === */
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* === SNIPPET AUTHOR === */
+.snippet-author {
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* === BUTTON GROUP (Centrera knappar) === */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* === KNAPPAR (DELETE, EDIT, CANCEL) === */
+.delete-button, .edit-button, .cancel-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* DELETE BUTTON */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* EDIT BUTTON */
+.edit-button {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+}
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+/* CANCEL BUTTON */
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+/* === BACK TO LIST BUTTON === */
+.back-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* === POPUP STYLING === */
+.popup-overlay {
+  display: none; /* Döljer popup från början */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+/* === OTHER SNIPPETS BUTTON === */
+.other-snippets-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.other-snippets-button:hover {
+  background-color: #0056b3;
+}
+
+/* === OTHER SNIPPETS LIST CONTAINER === */
+.snippets-list-container {
+  display: none; /* Dold från början */
+  position: fixed;
+  top: 100px;
+  right: 20px; 
+  width: 280px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fde4e4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Lista med snyggare layout */
+.snippets-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.snippets-list-container ul li {
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.snippets-list-container ul li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.snippets-list-container ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+}
+
+.snippets-list-container ul li a:hover {
+  text-decoration: underline;
+}
+

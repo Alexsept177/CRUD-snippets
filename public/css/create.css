@@ -1,0 +1,36 @@
+h1 {
+  color: #333;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.cancel {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #6c757d;
+  color: #ffffff;
+}

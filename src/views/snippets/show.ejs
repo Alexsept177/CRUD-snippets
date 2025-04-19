@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="./css/show.css">
+<script src="./js/show.js" defer></script>
+
+<div class="header-buttons">
+  <a class="back-button" href="./snippets/snippets_list">← Back to list</a>
+  <% if (loggedInUser && loggedInUser.id === snippet.createdBy._id.toString()) { %>
+    <a class="edit-button" href="./snippets/snippets_list/edit/<%= snippet._id %>">Edit</a>
+  <% } %>
+  <button id="toggleSnippetsBtn" class="other-snippets-button">Other Snippets</button>
+</div>
+
+<div class="snippet-container">
+  <h1><%= snippet.title %></h1>
+  <p><%= snippet.content %></p>
+
+  <small class="snippet-author">
+    By: <%= snippet.createdBy.username %> |
+    <span class="snippet-time">
+      <%= new Date(snippet.createdAt).toLocaleTimeString("sv-SE", { 
+        hour: "2-digit", 
+        minute: "2-digit", 
+        second: "2-digit"
+      }) %>
+    </span> |
+    <%= new Date(snippet.createdAt).toLocaleDateString("sv-SE", { 
+      year: "numeric", 
+      month: "long", 
+      day: "numeric" 
+    }) %>
+  </small>
+</div>
+
+<% if (loggedInUser && loggedInUser.id === snippet.createdBy._id.toString()) { %>
+  <div class="button-group">
+    <button id="deleteBtn" class="delete-button">Delete</button>
+  </div>
+<% } %>
+
+<div id="confirmPopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Are you sure?</h2>
+    <p>Do you really want to delete this snippet?</p>
+
+    <form id="deleteForm" action="./snippets/snippets_list/delete/<%= snippet._id %>" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="delete-button" type="submit">Delete</button>
+    </form>
+
+    <button id="cancelBtn" class="edit">Cancel</button>
+  </div>
+</div>
+
+<div id="snippetsPopup" class="snippets-list-container">
+  <h3>Other Snippets</h3>
+  <ul>
+    <% snippets.forEach(snippet => { %>
+      <li>
+        <a href="./snippets/snippets_list/show/<%= snippet._id %>">
+          <%= snippet.title %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</div>
